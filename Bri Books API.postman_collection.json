@@ -1,0 +1,427 @@
+{
+  "info": {
+    "_postman_id": "372eb7a1-907c-477e-8aab-e02e6b0a87c4",
+    "name": "Bri Books API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "19291960"
+  },
+  "item": [
+    {
+      "name": "auth",
+      "item": [
+        {
+          "name": "register",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "Rahul",
+                  "type": "text",
+                  "uuid": "76a4b8e6-2718-4b66-9f7c-9ee7d3cb3f11"
+                },
+                {
+                  "key": "email",
+                  "value": "imrahul050@gmail.com",
+                  "type": "text",
+                  "uuid": "9009522f-c995-47dd-ae14-b18cf0a6c801"
+                },
+                {
+                  "key": "password",
+                  "value": "password",
+                  "type": "text",
+                  "uuid": "41e878f3-1a62-40c5-817a-46ead406cb57"
+                },
+                {
+                  "key": "password_confirmation",
+                  "value": "password",
+                  "type": "text",
+                  "uuid": "e96f5f1f-b706-42e6-9abc-1692bac26881"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/auth/register",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "email",
+                  "value": "imrahul050@gmail.com",
+                  "type": "text",
+                  "uuid": "5feaa290-d970-4ca6-b085-5cdbc72df26f"
+                },
+                {
+                  "key": "password",
+                  "value": "password",
+                  "type": "text",
+                  "uuid": "69264b9f-2a30-41d9-9cde-52785a38cd76"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/auth/login",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "User Profile",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3YxL2xvZ2luIiwiaWF0IjoxNzgwMDMxNDA4LCJleHAiOjE3ODAwMzUwMDgsIm5iZiI6MTc4MDAzMTQwOCwianRpIjoiSFlkMEhEblBuYUFjdHRrNCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.ShKzZ3O02opQNWdMuZ_Icb4zVayTCCbW-2LLCGDdNq8",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/auth/profile",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "auth",
+                "profile"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "books",
+      "item": [
+        {
+          "name": "Books",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3ODAwMzU2ODYsImV4cCI6MTc4MDAzOTI4NiwibmJmIjoxNzgwMDM1Njg2LCJqdGkiOiJObHJyTmVYT2YxZ09IWEI2Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.58fkQ2MpWW28ODI5UsXbQ78DfXQMJnGW_RFwliEN64Y",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/books?search=&per_page=",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "books"
+              ],
+              "query": [
+                {
+                  "key": "search",
+                  "value": ""
+                },
+                {
+                  "key": "per_page",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create book",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3YxL2xvZ2luIiwiaWF0IjoxNzgwMDMxNDA4LCJleHAiOjE3ODAwMzUwMDgsIm5iZiI6MTc4MDAzMTQwOCwianRpIjoiSFlkMEhEblBuYUFjdHRrNCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.ShKzZ3O02opQNWdMuZ_Icb4zVayTCCbW-2LLCGDdNq8",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "Ramayana Part 2",
+                  "type": "text",
+                  "uuid": "fe38fc50-fee9-440d-97ed-4109b50143b7"
+                },
+                {
+                  "key": "author",
+                  "value": "Tulsidas",
+                  "type": "text",
+                  "uuid": "34a192ef-12c2-49c3-901b-324547f40804"
+                },
+                {
+                  "key": "cover_image",
+                  "type": "file",
+                  "uuid": "085082e7-d28c-47d7-b30c-34025ba5407a",
+                  "src": "/Users/rahulkumar/Downloads/5XACAOGveJ8GtabSzVTwqjtW8XmyAz1775803249.png"
+                },
+                {
+                  "key": "price",
+                  "value": "30",
+                  "type": "text",
+                  "uuid": "4ee641df-4fce-41b9-adde-453401d0c5a7"
+                },
+                {
+                  "key": "published_date",
+                  "value": "2026-05-13",
+                  "type": "text",
+                  "uuid": "ef9c1207-6878-454e-ba54-c471811565f4"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/books",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "books"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Book",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3YxL2xvZ2luIiwiaWF0IjoxNzgwMDMxNDA4LCJleHAiOjE3ODAwMzUwMDgsIm5iZiI6MTc4MDAzMTQwOCwianRpIjoiSFlkMEhEblBuYUFjdHRrNCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.ShKzZ3O02opQNWdMuZ_Icb4zVayTCCbW-2LLCGDdNq8",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "Ramayana Part 2",
+                  "type": "text"
+                },
+                {
+                  "key": "author",
+                  "value": "Tulsidas",
+                  "type": "text"
+                },
+                {
+                  "key": "cover_image",
+                  "type": "file",
+                  "src": "/Users/rahulkumar/Downloads/88ea11843a0f69c074fa1832032ce6e2167460c3 (1)-min.jpg"
+                },
+                {
+                  "key": "price",
+                  "value": "30",
+                  "type": "text"
+                },
+                {
+                  "key": "published_date",
+                  "value": "2026-05-13",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/books/1",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "books",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Book By Id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3YxL2xvZ2luIiwiaWF0IjoxNzgwMDMxNDA4LCJleHAiOjE3ODAwMzUwMDgsIm5iZiI6MTc4MDAzMTQwOCwianRpIjoiSFlkMEhEblBuYUFjdHRrNCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.ShKzZ3O02opQNWdMuZ_Icb4zVayTCCbW-2LLCGDdNq8",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/books/1",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "books",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Book",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3ODAwMzU2ODYsImV4cCI6MTc4MDAzOTI4NiwibmJmIjoxNzgwMDM1Njg2LCJqdGkiOiJObHJyTmVYT2YxZ09IWEI2Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.58fkQ2MpWW28ODI5UsXbQ78DfXQMJnGW_RFwliEN64Y",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/books/5",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "books",
+                "5"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
