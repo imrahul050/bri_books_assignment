@@ -54,7 +54,7 @@ bootstrap/
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repo-url> bari_books_assignment
+git clone https://github.com/imrahul050/bri_books_assignment.git bari_books_assignment
 cd bari_books_assignment
 ```
 
